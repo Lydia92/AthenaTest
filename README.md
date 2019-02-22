@@ -1,0 +1,41 @@
+# AthenaTest
+
+## API接口说明
+* /api/v1/initInfo
+  - GET
+    - 将现有环境加载到平台中，数据需按 tests 中的 testMetadata.xlsx 格式进行整理
+* /api/v1/instance
+  - GET
+    - 获取所有实例的基本信息
+* /api/v1/instance/:id
+  - GET
+    - 查看单个实例的详情
+* /api/v1/cluster
+  - GET
+    - 查看所有集群的基本信息
+* /api/v1/cluster/:id
+  - GET
+    - 查看单独集群的详情
+* /api/v1/dbaccount/:clusterName
+  - GET
+    - 根据集群名获取当前集群的账户信息
+* /api/v1/dbpasswd/:id
+  - GET
+    - 获取单个用户的密码明文
+* /api/v1/slowsql/:clusterName
+  - GET
+    - 获取单个集群下面的慢 SQL 
+* /api/v1/slowsqlbyid/:id
+  - GET
+    - 获取单个慢SQL详情
+* /api/v1/hostbycluster/:clusterName
+  - GET
+    - 根据集群名获取实例信息
+* /api/v1/hostbycluster/
+  - GET
+    -参数 根据host，port
+  - 获取库信息
+* /api/v1/tableInfo/
+  - GET
+    -参数 根据host，port，库，表
+    - 获取单张表详情
